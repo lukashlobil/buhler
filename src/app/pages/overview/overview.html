@@ -2,7 +2,7 @@
   <h1 class="overview-title">Production Line Overview</h1>
   <div class="line">
     @for (machine of machineService.machines(); track machine.id; let last = $last) {
-      <div class="machine-card">
+      <div class="machine-card" [class]="machine.state">
         <div class="machine-icon">
           <buh-state-indicator [state]="machine.state" />
         </div>
@@ -14,9 +14,7 @@
         </div>
       </div>
       @if (!last) {
-        <div class="line-connector">
-          <span class="material-symbols-outlined connector-arrow">arrow_forward</span>
-        </div>
+        <div class="line-connector"></div>
       }
     }
   </div>

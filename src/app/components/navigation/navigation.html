@@ -4,7 +4,7 @@
   </div>
   <div class="nav-machines">
     @for (machine of machineService.machines(); track machine.id) {
-      <div class="nav-machine">
+      <div class="nav-machine" [class]="machine.state">
         <span class="machine-name">{{ machine.name }}</span>
         <buh-state-indicator [state]="machine.state" />
       </div>

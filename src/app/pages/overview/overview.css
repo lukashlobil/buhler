@@ -31,11 +31,26 @@
   border-radius: 12px;
   min-width: 160px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.2s, border-color 0.3s;
+  transition: box-shadow 0.2s, border-color 0.3s, background 0.3s;
 }
 
 .machine-card:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.machine-card.running {
+  background: #e8f5e9;
+  border-color: #a5d6a7;
+}
+
+.machine-card.warning {
+  background: #fff3e0;
+  border-color: #ffcc80;
+}
+
+.machine-card.alarm {
+  background: #ffebee;
+  border-color: #ef9a9a;
 }
 
 .machine-icon {
@@ -85,13 +100,7 @@
 }
 
 .line-connector {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-}
-
-.connector-arrow {
-  font-size: 2rem;
-  color: #c8c8d4;
+  width: 40px;
+  height: 2px;
+  background: #c8c8d4;
 }

@@ -33,6 +33,21 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.nav-machine.running {
+  background: rgba(76, 175, 80, 0.15);
+}
+
+.nav-machine.warning {
+  background: rgba(255, 152, 0, 0.15);
+}
+
+.nav-machine.alarm {
+  background: rgba(244, 67, 54, 0.15);
 }
 
 .machine-name {
