@@ -1,0 +1,10 @@
+.state-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.state-indicator .material-symbols-outlined {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

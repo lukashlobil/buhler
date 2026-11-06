@@ -1,0 +1,23 @@
+<div class="overview">
+  <h1 class="overview-title">Production Line Overview</h1>
+  <div class="line">
+    @for (machine of machineService.machines(); track machine.id; let last = $last) {
+      <div class="machine-card">
+        <div class="machine-icon">
+          <buh-state-indicator [state]="machine.state" />
+        </div>
+        <div class="machine-info">
+          <span class="machine-name">{{ machine.name }}</span>
+          <span class="machine-state" [class]="machine.state">
+            {{ machine.state.charAt(0).toUpperCase() + machine.state.slice(1) }}
+          </span>
+        </div>
+      </div>
+      @if (!last) {
+        <div class="line-connector">
+          <span class="material-symbols-outlined connector-arrow">arrow_forward</span>
+        </div>
+      }
+    }
+  </div>
+</div>
