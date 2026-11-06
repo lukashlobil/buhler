@@ -1,7 +1,7 @@
 <div class="overview">
   <h1 class="overview-title">Production Line Overview</h1>
   <div class="line">
-    @for (machine of machineService.machines(); track machine.id; let last = $last) {
+    @for (machine of machineStore.machines(); track machine.id; let last = $last) {
       <div class="machine-card" [class]="machine.state">
         <div class="machine-icon">
           <buh-state-indicator [state]="machine.state" />

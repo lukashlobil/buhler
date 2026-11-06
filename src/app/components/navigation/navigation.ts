@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
-import { MachineService } from '../../services/machine.service';
 import { StateIndicator } from '../shared/state-indicator/state-indicator';
+import { MachineStore } from '../../stores/machine.store';
 
 @Component({
   selector: 'buh-navigation',
@@ -9,7 +9,7 @@ import { StateIndicator } from '../shared/state-indicator/state-indicator';
   styleUrl: './navigation.css',
 })
 export class Navigation {
-  readonly machineService = inject(MachineService);
+  readonly machineStore = inject(MachineStore);
   readonly menuOpen = signal(false);
 
   toggleMenu() {

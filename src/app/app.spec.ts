@@ -1,14 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { App } from './app';
-import { Navigation } from './components/navigation/navigation';
-import { MachineService } from './services/machine.service';
+import { MachineStore } from './stores/machine.store';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-      providers: [provideRouter([]), MachineService],
+      providers: [provideRouter([]), MachineStore],
     }).compileComponents();
   });
 

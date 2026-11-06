@@ -3,7 +3,7 @@
     <img src="buhler_logo.svg" alt="Bühler" class="logo" />
   </div>
   <div class="nav-machines">
-    @for (machine of machineService.machines(); track machine.id) {
+    @for (machine of machineStore.machines(); track machine.id) {
       <div class="nav-machine" [class]="machine.state">
         <span class="machine-name">{{ machine.name }}</span>
         <buh-state-indicator [state]="machine.state" />

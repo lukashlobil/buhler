@@ -5,7 +5,7 @@
     [(ngModel)]="selectedMachineId"
   >
     <option value="" disabled>Select machine</option>
-    @for (machine of machines(); track machine.id) {
+    @for (machine of machineStore.machines(); track machine.id) {
       <option [value]="machine.id">{{ machine.name }}</option>
     }
   </select>

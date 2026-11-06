@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MachineService } from '../../../services/machine.service';
 import { MachineState } from '../../../models/machine';
+import { MachineStore } from '../../../stores/machine.store';
 
 @Component({
   selector: 'buh-machine-control',
@@ -10,9 +10,7 @@ import { MachineState } from '../../../models/machine';
   styleUrl: './machine-control.css',
 })
 export class MachineControl {
-  readonly #machineService = inject(MachineService);
-
-  readonly machines = this.#machineService.machines;
+  readonly machineStore = inject(MachineStore);
   readonly states: MachineState[] = ['running', 'warning', 'alarm'];
 
   selectedMachineId = '';
@@ -20,7 +18,7 @@ export class MachineControl {
 
   apply() {
     if (this.selectedMachineId) {
-      this.#machineService.updateState(this.selectedMachineId, this.selectedState);
+      this.machineStore.updateState(this.selectedMachineId, this.selectedState);
     }
   }
 }
