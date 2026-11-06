@@ -104,3 +104,60 @@
   height: 2px;
   background: #c8c8d4;
 }
+
+@media (max-width: 900px) {
+  .overview {
+    padding: 2.5rem 1.25rem 6rem;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .machine-card {
+    min-width: 0;
+    width: 100%;
+    max-width: 520px;
+    padding: 1.5rem 1rem;
+  }
+
+  .line-connector {
+    flex: 0 0 28px;
+    width: 2px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .overview {
+    padding: 2rem 1rem 7rem;
+  }
+
+  .overview-title {
+    margin-bottom: 1.75rem;
+    font-size: 1.3rem;
+  }
+
+  .line {
+    gap: 0;
+  }
+
+  .machine-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .machine-icon {
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .machine-info {
+    align-items: flex-start;
+  }
+}

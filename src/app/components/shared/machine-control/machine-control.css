@@ -62,3 +62,23 @@
 .control-btn .material-symbols-outlined {
   font-size: 0.95rem;
 }
+
+@media (max-width: 560px) {
+  .control-bar {
+    gap: 0.5rem;
+    padding: 0.65rem 0.75rem;
+  }
+
+  .control-select {
+    flex: 1 1 0;
+    min-width: 0;
+    padding-right: 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  .control-btn {
+    flex: 0 0 auto;
+    padding: 0.45rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
