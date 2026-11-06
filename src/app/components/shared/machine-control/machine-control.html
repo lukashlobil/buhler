@@ -1,0 +1,33 @@
+<div class="control-bar">
+  <select
+    id="machine-select"
+    class="control-select"
+    [(ngModel)]="selectedMachineId"
+  >
+    <option value="" disabled>Select machine</option>
+    @for (machine of machines(); track machine.id) {
+      <option [value]="machine.id">{{ machine.name }}</option>
+    }
+  </select>
+
+  <select
+    id="state-select"
+    class="control-select"
+    [(ngModel)]="selectedState"
+  >
+    @for (state of states; track state) {
+      <option [value]="state">
+        {{ state.charAt(0).toUpperCase() + state.slice(1) }}
+      </option>
+    }
+  </select>
+
+  <button
+    class="control-btn"
+    [disabled]="!selectedMachineId"
+    (click)="apply()"
+  >
+    <span class="material-symbols-outlined">play_arrow</span>
+    Apply
+  </button>
+</div>

@@ -15,7 +15,7 @@
 }
 
 .logo {
-  height: 36px;
+  height: 48px;
   width: auto;
 }
 
@@ -39,18 +39,74 @@
   color: #c8c8d4;
 }
 
-.nav-links a {
+.nav-user {
+  position: relative;
+}
+
+.user-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  color: #c8c8d4;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.user-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.user-btn .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.user-btn .chevron {
+  font-size: 18px;
+}
+
+.user-name {
+  color: inherit;
+}
+
+.user-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  background: #2a2a3e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  z-index: 100;
+}
+
+.user-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
   color: #c8c8d4;
   text-decoration: none;
   font-size: 0.875rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
   transition: background 0.2s, color 0.2s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.user-menu li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+
+.user-menu .material-symbols-outlined {
+  font-size: 20px;
 }

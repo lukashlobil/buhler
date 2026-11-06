@@ -1,0 +1,64 @@
+.control-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1.5rem;
+  background: #f5f5fa;
+  border-top: 1px solid #e8e8ef;
+  z-index: 50;
+}
+
+.control-select {
+  padding: 0.4rem 2rem 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: #1a1a2e;
+  background: #fff;
+  border: 1px solid #d8d8e0;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236b6b80' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+}
+
+.control-select:focus {
+  border-color: #6366f1;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: #6366f1;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.control-btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.control-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.control-btn .material-symbols-outlined {
+  font-size: 0.95rem;
+}

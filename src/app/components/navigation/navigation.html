@@ -10,7 +10,27 @@
       </div>
     }
   </div>
-  <div class="nav-links">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Overview</a>
+  <div class="nav-user">
+    <button class="user-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+      <span class="material-symbols-outlined">person</span>
+      <span class="user-name">Operator</span>
+      <span class="material-symbols-outlined chevron">{{ menuOpen() ? 'expand_less' : 'expand_more' }}</span>
+    </button>
+    @if (menuOpen()) {
+      <ul class="user-menu" (click)="closeMenu()">
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">settings</span>
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+          </a>
+        </li>
+      </ul>
+    }
   </div>
 </nav>
